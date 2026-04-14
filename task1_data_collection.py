@@ -38,7 +38,7 @@ if response.status_code != 200:
     print("Error fetching IDs")
     exit()
 
-story_ids = response.json()[:50]
+story_ids = response.json()[:500]
 
 all_data = []
 
@@ -86,7 +86,7 @@ for cat in categories:
     print(cat, "collected:", count)
 
     # sleep after each category
-   # time.sleep(0.1)
+    time.sleep(2)
 
 
 # save file
